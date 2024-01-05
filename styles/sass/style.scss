@@ -1,0 +1,11 @@
+@import 'variaveis/variaveis.scss';
+@import 'componentes/header.scss';
+@import 'componentes/main.scss';
+@import 'componentes/footer.scss';
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: $base-white;
+}

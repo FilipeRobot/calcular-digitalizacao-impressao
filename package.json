@@ -1,0 +1,13 @@
+{
+  "name": "calcular-digitalizacao-impressao",
+  "version": "1.0.0",
+  "description": "Um site criado para que as pessoas possam calcular, de forma simples, quanto vai custar a digitalização e impressão de folhas na minha impressora",
+  "keywords": [
+    "Calcular",
+    "custo",
+    "Impressão",
+    "Digitalização"
+  ],
+  "author": "FilipeRobot",
+  "license": "ISC"
+}
