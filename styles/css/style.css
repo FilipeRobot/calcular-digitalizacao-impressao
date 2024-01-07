@@ -1,60 +1,135 @@
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-height: min-content;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+@media (min-width: 900px) {
+  body {
+    max-width: 1080px;
+  }
 }
 
 header {
-  width: 1024px;
+  max-width: 640px;
+  max-height: max-content;
   display: flex;
   justify-content: start;
-  padding: 20px 200px;
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
+  margin: 20px auto;
+}
+header .__image {
+  width: 130px;
+  height: 130px;
 }
 header .__title {
-  margin: auto 20px;
+  margin: auto 10px;
+  font-size: 40px;
+}
+header .__title .__separador {
+  display: block;
+}
+@media (min-width: 900px) {
+  header .__title .__separador {
+    display: inline;
+  }
 }
 
 main {
-  margin: 0 auto;
-  padding: 0 50px;
+  margin: 10px auto;
   display: flex;
-  justify-content: center;
-  align-content: space-between;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-left: 10px;
 }
-
-.__precos {
-  flex: 1 1 560px;
-  margin: 20px;
+@media (min-width: 900px) {
+  main {
+    justify-content: center;
+    padding-left: 0;
+  }
 }
-
-.__calculadora {
-  flex: 1 1 530px;
-  margin: 20px;
+main .__subtitle {
+  margin-bottom: 5px;
 }
-.__calculadora .__form div * {
+main .__text {
+  font-size: 16px;
+}
+main .__precos {
+  font-size: 18px;
+}
+@media (min-width: 900px) {
+  main .__precos {
+    flex: 1 1 560px;
+    height: 350px;
+  }
+}
+main .__precos ul {
+  margin-left: 30px;
+}
+main .__precos ul li {
+  margin-bottom: 10px;
+}
+main .__calculadora {
+  font-size: 18px;
+  width: 540px;
+}
+@media (min-width: 900px) {
+  main .__calculadora {
+    flex: 1 1 440px;
+    height: 350px;
+  }
+}
+main .__calculadora .__form {
+  margin-bottom: 15px;
+  text-align: center;
+}
+@media (min-width: 900px) {
+  main .__calculadora .__form {
+    padding-left: 15px;
+  }
+}
+main .__calculadora .__form .__digitalizar {
+  text-align: left;
+}
+main .__calculadora .__form .__imprimir {
+  text-align: left;
+}
+main .__calculadora .__form .__quantidades {
   margin: 5px;
 }
-.__calculadora .__form #quantidade {
+main .__calculadora .__form .__quantidades .__input--number {
   width: 100px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+}
+main .__calculadora .__form .__button {
+  padding: 4px 8px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+main .__calculadora .__resultado {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
 }
 
 footer {
-  width: 1024px;
-  position: static;
-  left: 0;
-  bottom: 0;
-  width: 100%;
   text-align: center;
   padding: 10px 0;
   margin: 0 auto;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
 }
 
 /*# sourceMappingURL=style.css.map */

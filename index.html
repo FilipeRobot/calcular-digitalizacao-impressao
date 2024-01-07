@@ -12,8 +12,8 @@
 </head>
 <body>
     <header class="header">
-        <img class="__image" src="img/Desenho-Logo-HP-PNG.png" alt="Logo da HP indicando a marca da impressora usada para a impressão" width="190px" height="190px">
-        <h1 class="__title">Digitalização e Impressão</h1>
+        <img class="__image" src="img/Desenho-Logo-HP-PNG.png" alt="Logo da HP indicando a marca da impressora usada para a impressão">
+        <h1 class="__title">Digitalização <span class="__separador">e</span> Impressão</h1>
     </header>
     <main class="main">
         <section class="__precos">
@@ -44,37 +44,37 @@
             <h2 class="__subtitle">Calculadora de Custos:</h2>
             <form class="__form">
                 <div class="__digitalizar">
-                    <label class="__label" for="digitalizar">Precisa Digitalizar:</label>
-                    <input type="checkbox" name="digitalizar" id="digitalizar" onclick="checkedBox(this)"> <br>
+                    <label class="__label __text" for="digitalizar">Precisa Digitalizar:</label>
+                    <input class="__input--check" type="checkbox" name="digitalizar" id="digitalizar" onclick="checkedBox(this)"> <br>
 
                     <div class="__quantidades" id="quantidade-digitalizar" hidden="hidden">
-                        <label class="__label" for="documento-quantidade">Documento:</label>
-                        <input class="__input" type="number" name="documento-quantidade" id="documento-quantidade" value="0" max="50"> <br>
+                        <label class="__label __text" for="documento-quantidade">Documento:</label>
+                        <input class="__input--number" type="number" name="documento-quantidade" id="documento-quantidade" value="0" max="50"> <br>
 
-                        <label class="__label" for="folha-encadernada-quantidade">Folha encadernada:</label>
-                        <input class="__input" type="number" name="folha-encadernada-quantidade" id="folha-encadernada-quantidade" value="0" max="50"> <br>
+                        <label class="__label __text" for="folha-encadernada-quantidade">Folha encadernada:</label>
+                        <input class="__input--number" type="number" name="folha-encadernada-quantidade" id="folha-encadernada-quantidade" value="0" max="50"> <br>
 
-                        <label class="__label" for="papel-comum-quantidade">Folha encadernada:</label>
-                        <input class="__input" type="number" name="papel-comum-quantidade" id="papel-comum-quantidade" value="0" max="50"> <br>
+                        <label class="__label __text" for="papel-comum-quantidade">Folha encadernada:</label>
+                        <input class="__input--number" type="number" name="papel-comum-quantidade" id="papel-comum-quantidade" value="0" max="50"> <br>
                     </div>
                 </div>
 
                 <div class="__imprimir">
-                    <label class="__label" for="imprimir">Precisa Imprimir:</label>
-                    <input type="checkbox" name="imprimir" id="imprimir" onclick="checkedBox(this)" checked > <br>
+                    <label class="__label __text" for="imprimir">Precisa Imprimir:</label>
+                    <input class="__input--check" type="checkbox" name="imprimir" id="imprimir" onclick="checkedBox(this)" checked > <br>
 
                     <div class="__quantidades" id="quantidade-imprimir">
-                        <label class="__label" for="preto-branco-quantidade">Preto e branco:</label>
-                        <input class="__input" type="number" name="preto-branco-quantidade" id="preto-branco-quantidade" value="1" max="50"> <br>
+                        <label class="__label __text" for="preto-branco-quantidade">Preto e branco:</label>
+                        <input class="__input--number" type="number" name="preto-branco-quantidade" id="preto-branco-quantidade" value="1" max="50"> <br>
 
-                        <label class="__label" for="colorido-quantidade">Colorido:</label>
-                        <input class="__input" type="number" name="colorido-quantidade" id="colorido-quantidade" value="0" max="50"> <br>
+                        <label class="__label __text" for="colorido-quantidade">Colorido:</label>
+                        <input class="__input--number" type="number" name="colorido-quantidade" id="colorido-quantidade" value="0" max="50"> <br>
                     </div>
                     
                 </div>
                 <button class="__button" type="button" onclick="exibirValor()">Calcular</button>
             </form>
-            <p class="__resultado" id="valor-calculado">R$ 0,50</p>
+            <p class="__resultado __text" id="valor-calculado">R$ 0,50</p>
         </section>
     </main>
 
