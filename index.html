@@ -42,39 +42,39 @@
         </section>
         <section class="__calculadora">
             <h2 class="__subtitle">Calculadora de Custos:</h2>
-            <form class="__form">
+            <form class="__form" id="form_custos" action="" method="post">
                 <div class="__digitalizar">
                     <label class="__label __text" for="digitalizar">Precisa Digitalizar:</label>
-                    <input class="__input--check" type="checkbox" name="digitalizar" id="digitalizar" onclick="checkedBox(this)"> <br>
+                    <input class="__input--check" type="checkbox" name="digitalizar" id="digitalizar"> <br> <!-- onclick="checkedBox(this) -->
 
-                    <div class="__quantidades" id="quantidade-digitalizar" hidden="hidden">
-                        <label class="__label __text" for="documento-quantidade">Documento:</label>
-                        <input class="__input--number" type="number" name="documento-quantidade" id="documento-quantidade" value="0" max="50"> <br>
+                    <div class="__quantidades" id="qtd_digitalizar" hidden="hidden">
+                        <label class="__label __text" for="qtd_documento">Documento:</label>
+                        <input class="__input--number" type="number" name="qtd_documento" id="qtd_documento" value="0" max="50"> <br>
 
-                        <label class="__label __text" for="folha-encadernada-quantidade">Folha encadernada:</label>
-                        <input class="__input--number" type="number" name="folha-encadernada-quantidade" id="folha-encadernada-quantidade" value="0" max="50"> <br>
+                        <label class="__label __text" for="qtd_folha_encadernada">Folha encadernada:</label>
+                        <input class="__input--number" type="number" name="qtd_folha_encadernada" id="qtd_folha_encadernada" value="0" max="50"> <br>
 
-                        <label class="__label __text" for="papel-comum-quantidade">Folha encadernada:</label>
-                        <input class="__input--number" type="number" name="papel-comum-quantidade" id="papel-comum-quantidade" value="0" max="50"> <br>
+                        <label class="__label __text" for="qtd_papel_comum">Folha encadernada:</label>
+                        <input class="__input--number" type="number" name="qtd_papel_comum" id="qtd_papel_comum" value="0" max="50"> <br>
                     </div>
                 </div>
 
                 <div class="__imprimir">
                     <label class="__label __text" for="imprimir">Precisa Imprimir:</label>
-                    <input class="__input--check" type="checkbox" name="imprimir" id="imprimir" onclick="checkedBox(this)" checked > <br>
+                    <input class="__input--check" type="checkbox" name="imprimir" id="imprimir" checked> <br> <!-- onclick="checkedBox(this) -->
 
-                    <div class="__quantidades" id="quantidade-imprimir">
-                        <label class="__label __text" for="preto-branco-quantidade">Preto e branco:</label>
-                        <input class="__input--number" type="number" name="preto-branco-quantidade" id="preto-branco-quantidade" value="1" max="50"> <br>
+                    <div class="__quantidades" id="qtd_imprimir">
+                        <label class="__label __text" for="qtd_preto_branco">Preto e branco:</label>
+                        <input class="__input--number" type="number" name="qtd_preto_branco" id="qtd_preto_branco" value="1" max="50"> <br>
 
-                        <label class="__label __text" for="colorido-quantidade">Colorido:</label>
-                        <input class="__input--number" type="number" name="colorido-quantidade" id="colorido-quantidade" value="0" max="50"> <br>
+                        <label class="__label __text" for="qtd_colorido">Colorido:</label>
+                        <input class="__input--number" type="number" name="qtd_colorido" id="qtd_colorido" value="0" max="50"> <br>
                     </div>
                     
                 </div>
-                <button class="__button" type="button" onclick="exibirValor()">Calcular</button>
+                <button class="__button" id="btn_calcular" type="submit" >Calcular</button>
             </form>
-            <p class="__resultado __text" id="valor-calculado">R$ 0,50</p>
+            <p class="__resultado __text" id="valor_calculado">R$&nbsp;0,50</p>
         </section>
     </main>
 

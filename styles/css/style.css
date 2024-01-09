@@ -115,6 +115,15 @@ main .__calculadora .__form .__quantidades .__input--number {
   border: 1px solid #ccc;
   margin-bottom: 5px;
 }
+main .__calculadora .__form .__quantidades .__input--number:focus {
+  outline: 2px solid #92c2f2;
+}
+main .__calculadora .__form .__quantidades .erro {
+  border: 2px solid rgb(231, 70, 70);
+}
+main .__calculadora .__form .__quantidades .erro:focus {
+  outline: none;
+}
 main .__calculadora .__form .__button {
   padding: 4px 8px;
   font-size: 20px;
