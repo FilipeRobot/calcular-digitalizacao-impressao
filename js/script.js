@@ -131,7 +131,7 @@ checkboxes.forEach((checkBox) => {
 
 		if (eventId === idImprimir) {
 			const qtdImprimirDiv =
-				event.target.ownerDocument.querySelector('#qtd_digitalizar');
+				event.target.ownerDocument.querySelector('#qtd_imprimir');
 			const isHidden = qtdImprimirDiv.getAttribute('hidden');
 
 			input.qtdPretoBranco.value = 0;
