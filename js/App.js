@@ -1,4 +1,4 @@
-import Main from './modules/main.js';
+import Main from './modules/Main.js';
 
 const app = new Main();
 app.run()
