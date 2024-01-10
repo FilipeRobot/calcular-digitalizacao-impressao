@@ -98,10 +98,7 @@ main .__calculadora .__form {
     padding-left: 15px;
   }
 }
-main .__calculadora .__form .__digitalizar {
-  text-align: left;
-}
-main .__calculadora .__form .__imprimir {
+main .__calculadora .__form div {
   text-align: left;
 }
 main .__calculadora .__form .__quantidades {

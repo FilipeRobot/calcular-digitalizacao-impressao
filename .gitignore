@@ -2,3 +2,7 @@
 *.css.map
 *.sass.map
 *.scss.map
+
+# não versionar script de desenvolvimento
+dev.js
+js/OLD/
