@@ -8,7 +8,7 @@
     <meta name="keywords" content="Calcular custo, Impressão, Digitalização" />
     <title>Calcule o preço da Impressão e Digitalização</title>
     <link rel="stylesheet" type="text/css" href="./styles/css/style.css">
-    <script src="./js/index.js" defer></script>
+    <script src="./js/App.js" type="module" defer></script>
 </head>
 <body>
     <header class="header">
@@ -20,23 +20,29 @@
             <h2 class="__subtitle">Digitalização:</h2>
             <ul>
                 <li>
-                    <p class="__text">Documentos (RG, CPF, CERTIDÃO, HABILITAÇÃO): R$ 0,50 por Folha</p>
+                    <p class="__text" id="txt_documento">Documentos (RG, CPF, CERTIDÃO, HABILITAÇÃO): R$ 0,50 por Folha</p>
                 </li>
                 <li>
-                    <p class="__text">Folhas encadernadas: R$ 0,30 por Folha</p>
+                    <p class="__text" id="txt_folha_encadernada">Folhas encadernadas: R$ 0,30 por Folha</p>
                 </li>
                 <li>
-                    <p class="__text">Papel A4 (Comum): R$ 0,20 por Folha</p>
+                    <p class="__text" id="txt_papel_comum">Papel A4 (Comum): R$ 0,20 por Folha</p>
                 </li>
             </ul>
             
-            <h2 class="__subtitle">Impressão</h2>
+            <h2 class="__subtitle">Impressão / Xerox</h2>
             <ul>
                 <li>
-                    <p class="__text">Preto e Branco: R$ 0,50 por Folha</p>
+                    <p class="__text" id="txt_preto_barnco">Preto e Branco: R$ 0,50 por Folha</p>
                 </li>
                 <li>
-                    <p class="__text">Colorido: R$ 1,00 por Folha</p>
+                    <p class="__text" id="txt_colorido">Colorido: R$ 1,00 por Folha</p>
+                </li>
+            </ul>
+            <h2 class="__subtitle">Curriculo</h2>
+            <ul>
+                <li>
+                    <p class="__text" id="txt_curriculo"></p>
                 </li>
             </ul>
         </section>
@@ -44,7 +50,7 @@
             <h2 class="__subtitle">Calculadora de Custos:</h2>
             <form class="__form" id="form_custos" action="" method="post">
                 <div class="__digitalizar">
-                    <label class="__label __text" for="digitalizar">Precisa Digitalizar:</label>
+                    <label class="__label __text" for="digitalizar">Digitalizar:</label>
                     <input class="__input--check" type="checkbox" name="digitalizar" id="digitalizar"> <br>
 
                     <div class="__quantidades" id="qtd_digitalizar" hidden="hidden">
@@ -60,7 +66,7 @@
                 </div>
 
                 <div class="__imprimir">
-                    <label class="__label __text" for="imprimir">Precisa Imprimir:</label>
+                    <label class="__label __text" for="imprimir">Imprimir / Xerox:</label>
                     <input class="__input--check" type="checkbox" name="imprimir" id="imprimir" checked> <br>
 
                     <div class="__quantidades" id="qtd_imprimir">
@@ -70,11 +76,16 @@
                         <label class="__label __text" for="qtd_colorido">Colorido:</label>
                         <input class="__input--number" type="number" name="qtd_colorido" id="qtd_colorido" value="0" max="50"> <br>
                     </div>
-                    
                 </div>
+
+                <div class="__curriculo">
+                    <label class="__label __text" for="curriculo">Curriculo:</label>
+                    <input class="__input--check" type="checkbox" name="curriculo" id="curriculo"> <br>
+                </div>
+
                 <button class="__button" id="btn_calcular" type="submit" >Calcular</button>
             </form>
-            <p class="__resultado __text" id="valor_calculado">R$&nbsp;0,50</p>
+            <p class="__resultado __text" id="valor_calculado"></p>
         </section>
     </main>
 
