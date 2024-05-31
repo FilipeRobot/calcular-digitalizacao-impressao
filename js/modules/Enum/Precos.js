@@ -1,9 +1,9 @@
 const precoGeral = {
-    pretoBranco: 0.75,
-    colorido: 2,
-    documento: 1,
-    folhaEncadernada: 0.75,
-    papelComum: 0.5,
+    pretoBranco: 1.50,
+    colorido: 3,
+    documento: 2,
+    folhaEncadernada: 1.75,
+    papelComum: 1,
     curriculo: 5,
 }
 
