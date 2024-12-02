@@ -1,0 +1,13 @@
+header {
+    width: 1024px;
+    display: flex;
+    justify-content: start;
+    padding: 20px 200px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+
+    .__title {
+        margin: auto 20px;
+    }
+}

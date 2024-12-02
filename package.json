@@ -1,0 +1,22 @@
+{
+  "name": "calcular_digitalizacao_impressao",
+  "version": "1.5.3",
+  "description": "Um site criado para que as pessoas possam calcular, de forma simples, quanto vai custar a digitalização e impressão de folhas na minha impressora",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node js/dev.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Calcular",
+    "custo",
+    "Impressão",
+    "Digitalização"
+  ],
+  "homepage": "https://filiperobot.github.io/calcular-digitalizacao-impressao/",
+  "bugs": {
+    "email": "filipe_lemos@live.com"
+  },
+  "author": "FilipeRobot <filipe_lemos@live.com> (https://github.com/filiperobot)",
+  "license": "ISC"
+}

@@ -1,0 +1,179 @@
+// @import 'variaveis/variaveis.scss';
+// @import 'componentes/header.scss';
+// @import 'componentes/main.scss';
+// @import 'componentes/footer.scss';
+
+// variaveis
+
+$base-white: #f4f4f4;
+$base-black: #191919;
+
+
+// mixins
+
+@mixin descktop {
+    @media (min-width: 900px) {
+        @content;
+    }
+}
+
+
+
+// geral
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    @include descktop {
+        max-width: 1080px;
+    }
+    max-height: min-content;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    background-color: $base-white;
+}
+
+// Header
+
+header {
+    max-width: 640px;
+    max-height: max-content;
+    display: flex;
+    justify-content: start;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px auto;
+
+    .__image {
+        width: 130px;
+        height: 130px;
+    }
+
+    .__title {
+        margin: auto 10px;
+        font-size: 40px;
+
+        .__separador {
+            @include descktop {
+                display: inline;
+            }
+            display: block;
+        }
+    }
+}
+
+// Main
+
+main {
+    @include descktop {
+        justify-content: center;
+        padding-left: 0;
+    }
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-left: 10px;
+
+    .__subtitle {
+        margin-bottom: 5px;
+    }
+
+    .__text {
+        font-size: 16px;
+    }
+
+    .__precos {
+        @include descktop {
+            flex: 1 1 560px;
+            height: 350px;
+        }
+
+        font-size: 18px;
+
+        ul {
+            margin-left: 30px;
+
+            li {
+                margin-bottom: 10px;
+            }
+        }
+
+    }
+    
+    .__calculadora {
+        @include descktop {
+            flex: 1 1 440px;
+            height: 350px;
+        }
+        font-size: 18px;
+        width: 540px;
+    
+        .__form {
+            @include descktop {
+                padding-left: 15px;
+            }
+
+            margin-bottom: 15px;
+            text-align: center;
+
+            div {
+                text-align: left;
+            }
+
+            .__quantidades {
+                margin: 5px;
+
+                .__input--number {
+                    width: 100px;
+                    height: 30px;
+                    padding: 5px;
+                    border-radius: 5px;
+                    border: 1px solid #ccc;
+                    margin-bottom: 5px;
+
+                    &:focus {
+                        outline: 2px solid #92c2f2; //azul padrão
+                    }
+                }
+
+                .erro {
+                    border: 2px solid rgb(231, 70, 70); // vermelho erro
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            .__button {
+                padding: 4px 8px;
+                font-size: 20px;
+                border-radius: 5px;
+            }
+        }
+        
+        .__resultado {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+}
+
+// footer
+
+footer {
+    // width: 1024px;
+    // position: static;
+    // width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 auto;
+}

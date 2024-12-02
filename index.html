@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="FilipeRobot" />
+    <meta name="description" content="Um site criado para que as pessoas possam calcular, de forma simples, quanto vai custar a digitalização e impressão de folhas na minha impressora" />
+    <meta name="keywords" content="Calcular custo, Impressão, Digitalização" />
+    <title>Calcule o preço da Impressão e Digitalização</title>
+    <link rel="stylesheet" type="text/css" href="./styles/css/style.css">
+    <script src="./js/App.js" type="module"></script>
+</head>
+<body>
+    <header class="header">
+        <img class="__image" src="img/Desenho-Logo-HP-PNG.png" alt="Logo da HP indicando a marca da impressora usada para a impressão">
+        <h1 class="__title">Digitalização <span class="__separador">e</span> Impressão</h1>
+    </header>
+    <main class="main">
+        <section class="__precos">
+            <h2 class="__subtitle">Impressão / Xerox</h2>
+            <ul>
+                <li>
+                    <p class="__text" id="txt_preto_barnco">Preto e Branco: R$ 0,50 por Folha</p>
+                </li>
+                <li>
+                    <p class="__text" id="txt_colorido">Colorido: R$ 1,00 por Folha</p>
+                </li>
+            </ul>
+
+            <h2 class="__subtitle">Digitalização:</h2>
+            <ul>
+                <li>
+                    <p class="__text" id="txt_documento">Documentos (RG, CPF, CERTIDÃO, HABILITAÇÃO): R$ 0,50 por Folha</p>
+                </li>
+                <li>
+                    <p class="__text" id="txt_folha_encadernada">Folhas encadernadas: R$ 0,30 por Folha</p>
+                </li>
+                <li>
+                    <p class="__text" id="txt_papel_comum">Papel A4 (Comum): R$ 0,20 por Folha</p>
+                </li>
+            </ul>
+            
+            <h2 class="__subtitle">Currículo</h2>
+            <ul>
+                <li>
+                    <p class="__text" id="txt_curriculo"></p>
+                </li>
+            </ul>
+        </section>
+        <section class="__calculadora">
+            <h2 class="__subtitle">Calculadora de Custos:</h2>
+            <form class="__form" id="form_custos" action="" method="post">
+                <div class="__digitalizar">
+                    <label class="__label __text" for="digitalizar">Digitalizar:</label>
+                    <input class="__input--check" type="checkbox" name="digitalizar" id="digitalizar"> <br>
+
+                    <div class="__quantidades" id="qtd_digitalizar" hidden="hidden">
+                        <label class="__label __text" for="qtd_documento">Documento:</label>
+                        <input class="__input--number" type="number" name="qtd_documento" id="qtd_documento" value="0" max="50"> <br>
+
+                        <label class="__label __text" for="qtd_folha_encadernada">Folha encadernada:</label>
+                        <input class="__input--number" type="number" name="qtd_folha_encadernada" id="qtd_folha_encadernada" value="0" max="50"> <br>
+
+                        <label class="__label __text" for="qtd_papel_comum">Papel A4 (Comum):</label>
+                        <input class="__input--number" type="number" name="qtd_papel_comum" id="qtd_papel_comum" value="0" max="50"> <br>
+                    </div>
+                </div>
+
+                <div class="__imprimir">
+                    <label class="__label __text" for="imprimir">Imprimir / Xerox:</label>
+                    <input class="__input--check" type="checkbox" name="imprimir" id="imprimir" checked> <br>
+
+                    <div class="__quantidades" id="qtd_imprimir">
+                        <label class="__label __text" for="qtd_preto_branco">Preto e branco:</label>
+                        <input class="__input--number" type="number" name="qtd_preto_branco" id="qtd_preto_branco" value="1" max="50"> <br>
+
+                        <label class="__label __text" for="qtd_colorido">Colorido:</label>
+                        <input class="__input--number" type="number" name="qtd_colorido" id="qtd_colorido" value="0" max="50"> <br>
+                    </div>
+                </div>
+
+                <div class="__curriculo">
+                    <label class="__label __text" for="curriculo">Currículo:</label>
+                    <input class="__input--check" type="checkbox" name="curriculo" id="curriculo"> <br>
+                </div>
+
+                <button class="__button" id="btn_calcular" type="submit" >Calcular</button>
+            </form>
+            <p class="__resultado __text" id="valor_calculado"></p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="__text">
+            &copy; 
+            Pagina Construída por 
+            <a class="__link github" href="https://github.com/FilipeRobot" target="_blank" rel="noopener noreferrer">@FilipeRobot</a>
+            2023
+        </p>
+    </footer>
+</body>
+</html>
